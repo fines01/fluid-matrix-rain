@@ -40,16 +40,34 @@ frame.addEventListener('mouseout', function () { // or when mouse is still
     mouse.y = null;
 });
 
+frame.addEventListener('touchstart', function (event) {
+    mouse.x = event.x;
+    mouse.y = event.y;
+});
+
+frame.addEventListener('touchend', function() {
+    mouse.x = null;
+    mouse.y = null;
+});
+
+frame.addEventListener('click', function () {
+    mouse.x = null;
+    mouse.y = null;
+})
+
 function createCanvasGradient1() {
     radGradient1 = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 100, canvas.width / 2, canvas.height / 2, 400); // (x1,y1,radius1,x2,y2,radius2) // inner circle (x,y,radius 1 && outer circle (x,y,radius 22)) --> gradient will be drawn between these two circles
     radGradient1.addColorStop(0, 'rgba(51, 0, 87, 0.2)'); // (offset[0,1], color) , offset 0 == start, offset 1 == end
-    radGradient1.addColorStop(0.8, 'rgba(0,0,0,0.2)'); // add as many as you want
+    radGradient1.addColorStop(0.99, 'rgba(0,0,0,0.2)'); 
 }
 
 function createCanvasGradient2() {
     radGradient2 = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 100, canvas.width / 2, canvas.height / 2, 400); // (x1,y1,radius1,x2,y2,radius2) // inner circle (x,y,radius 1 && outer circle (x,y,radius 22)) --> gradient will be drawn between these two circles
     radGradient2.addColorStop(0, 'rgba(0,255,255, 0.05)'); // (offset[0,1], color) , offset 0 == start, offset 1 == end
-    radGradient2.addColorStop(0.8, 'rgba(255,0,255, 0.3)'); // add as many as you want
+    // radGradient2.addColorStop(0.5, 'rgba(0,255,255, 0.08)');
+    // radGradient2.addColorStop(0.8, 'rgba(255,0,255, 0.3)');
+    radGradient2.addColorStop(0.99, 'rgba(51, 0, 87, 0.5)');
+    
 }
 
 /*JS ES6 classes are syntactical sugar over prototype based inheritance or JS constructor functions */
@@ -94,7 +112,7 @@ class Character {
     draw() {
         ctx.textAlign = 'center';
         //else ctx.fillStyle = this.getColor();
-        if (this.pushed) ctx.fillStyle = 'rgb(45, 252, 216, 0.25)'; //'rgb(255,255,255,0.15)'; //'rgb(250, 39, 89)';
+        if (this.pushed) ctx.fillStyle = 'rgba(0,255,255,0.25)';//'rgb(45, 252, 216, 0.25)'; //'rgb(255,255,255,0.15)'; //'rgb(250, 39, 89)';
         else ctx.fillStyle = radGradient2;
         ctx.font = this.fontSize + 'px monospace';
         ctx.fillText(this.activeCharacter, this.x, this.y);
