@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts (download selected later) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Inter&family=Karla&family=Sen&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Particles</title>
+</head>
+
+<body>
+
+    <div class="navbar"></div>
+
+
+    <div class="frame" id="frame">
+        <div class="header">
+            <div class="">Hello, I am <span class="">Ines</span> Fritsch</div>
+            <div class="subtitle">Front-End <span>Developer</span></div>
+        </div>
+        <canvas id="canvas1"></canvas>
+    </div>
+
+    <div class="align-center mb-32 mt-16">
+        <div class="btn-secondary">My work</div>
+    </div>
+
+
+    <div class="section-block">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nemo quasi excepturi! Ducimus esse,
+            veniam nulla adipisci natus quo minus.</p>
+    </div>
+
+    <!-- customn inline svg filter (to first blur the particles and then apply strong contrast on top of it, to make the edges blend in) -->
+    <!-- <svg>
+        <filter id="blur-filter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feColorMatrix in="blur" mode="matrix" values="10000
+                        01000
+                        00100
+                        00019-9" result="goo" />
+            <feComposite in="SourceGraphic" in2="blur-filter" operator="atop" />
+        </filter>
+    </svg> -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
