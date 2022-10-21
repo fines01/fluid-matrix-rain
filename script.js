@@ -58,13 +58,14 @@ frame.addEventListener('click', function () {
 function createCanvasGradient1() { // for BG effect
     radGradient1 = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 100, canvas.width / 2, canvas.height / 2, 400); // (x1,y1,radius1,x2,y2,radius2) // inner circle (x,y,radius 1 && outer circle (x,y,radius 22)) --> gradient will be drawn between these two circles
     radGradient1.addColorStop(0, 'rgba(51, 0, 87, 0.2)'); // (offset[0,1], color) , offset 0 == start, offset 1 == end
-    radGradient1.addColorStop(0.99, 'rgba(0,0,0,0.2)'); 
+    radGradient1.addColorStop(0.89,'rgba(26,26,26,0.25');
+    //radGradient1.addColorStop(0.9999, 'rgba(0,0,0,0.1)'); 
 }
 
 function createCanvasGradient2() { // for character bg effect
     radGradient2 = ctx.createRadialGradient(canvas.width / 2, canvas.height / 2, 100, canvas.width / 2, canvas.height / 2, 400); // (x1,y1,radius1,x2,y2,radius2) // inner circle (x,y,radius 1 && outer circle (x,y,radius 22)) --> gradient will be drawn between these two circles
     radGradient2.addColorStop(0, 'rgba(0,255,255, 0.05)'); // (offset[0,1], color) , offset 0 == start, offset 1 == end
-    radGradient2.addColorStop(0.99, 'rgba(51, 0, 87, 0.5)');
+    radGradient2.addColorStop(0.89, 'rgba(51, 0, 87, 0.5)');
     
 }
 
